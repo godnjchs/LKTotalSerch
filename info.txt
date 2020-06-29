@@ -1,3 +1,10 @@
 naver api
  Client Id : otOLtR2LBUbv_AWne1Sz
  Client Secret : LQo8WlAAIN
+
+ 
+ kakao api 
+ JavaScript key : dda3510bf1a0b55b04b66df8ca8e8273
+ admin key : a048d5b6dda3333c769e954403ba59f6
+ Rest Api Key : c7f6f2a23a68df117fcc1e008a2f7265
+ Native App Key : 9e4f90124aeb5821e4862791a1074233
