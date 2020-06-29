@@ -28,7 +28,7 @@
         
             margin: 100px auto;
             width: 30%;
-            height: 20%;
+            	
             background-color: white;
             border-radius: 23px;
         }
@@ -61,7 +61,7 @@
                     <label for="userId">비밀번호</label>
                     <input type="password" placeholder="비밀번호" name = "password">
                     <div id="naverIdLogin"></div>
-                    <div id="create-kakao-login-btn"></div>
+                    <a id="create-kakao-login-btn" href="javascript:loginWithKaKao"></a>
                     
                 </div>
             </form>
@@ -85,13 +85,22 @@
 	    	Kakao.Auth.createLoginButton({
 	    	    container: '#create-kakao-login-btn',
 	    	    success: function(authObj) {
-	    	      alert(JSON.stringify(authObj))
+	    	      location.href="../main/main.html";
+	    	     
 	    	    },
 	    	    fail: function(err) {
 	    	      alert(JSON.stringify(err))
 	    	    },
 	    	  })
 	    	  
+	    		function loginWithKaKao(){
+	    			alert('실행!!')
+	    	 		Kakao.Auth.authorize({
+	    				 redirectUri : 'http://127.0.0.1:8080'
+	    	 	})
+	    	}
+	    	
+	    	   
 	    	  
 	    	
 	    	
