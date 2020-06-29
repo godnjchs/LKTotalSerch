@@ -1,0 +1,3 @@
+naver api
+ Client Id : otOLtR2LBUbv_AWne1Sz
+ Client Secret : LQo8WlAAIN
