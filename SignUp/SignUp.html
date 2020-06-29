@@ -2,11 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
-    <script type = "text/javascript" src = "https://developers.kakao.com/sdk/js/kakao.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
     <style>
         *{
             margin: 0;
@@ -20,9 +17,7 @@
             background: url("../main/Image/mainWallpaper.jpg");
             
         }
-        .mainContainer{
-            
-        }
+        
         .loginCard{
             padding: 7% 3%;
         
@@ -55,45 +50,21 @@
         <div class="loginCard">
             <form action="">
                 <h1>LKTotalSerch</h1>
+                <div class="socialLogin">
+                    <a href="
+                        https://nid.naver.com/oauth2.0/authorize?client_id=otOLtR2LBUbv_AWne1Sz&response_type=code&redirect_uri={개발자 센터에 등록한 콜백 URL(URL 인코딩)}&state={상태 토큰}
+                    "></a>
+
+                </div>
                 <div class="loginInfo">
                     <label for="id">아이디</label>
                     <input type="text" placeholder="아이디" name="userId">
                     <label for="userId">비밀번호</label>
                     <input type="password" placeholder="비밀번호" name = "password">
-                    <div id="naverIdLogin"></div>
-                    <div id="create-kakao-login-btn"></div>
-                    
                 </div>
             </form>
         </div>
     </div>
     
 </body>
-<script>
-	    var naverLogin = new naver.LoginWithNaverId(
-	    		{
-	    			clientId: "otOLtR2LBUbv_AWne1Sz",
-	    			callbackUrl: "http://127.0.0.1:8080/LKTotalSerch/main/main.html",
-	    			isPopup: false, /* 팝업을 통한 연동처리 여부 */
-	    			loginButton: {color: "green", type: 3, height: 60} /* 로그인 버튼의 타입을 지정 */
-	    		}
-	    	);
-	    	
-	    	/* 설정정보를 초기화하고 연동을 준비 */
-	    	naverLogin.init();
-	    	Kakao.init('dda3510bf1a0b55b04b66df8ca8e8273')
-	    	Kakao.Auth.createLoginButton({
-	    	    container: '#create-kakao-login-btn',
-	    	    success: function(authObj) {
-	    	      alert(JSON.stringify(authObj))
-	    	    },
-	    	    fail: function(err) {
-	    	      alert(JSON.stringify(err))
-	    	    },
-	    	  })
-	    	  
-	    	  
-	    	
-	    	
-    </script>
 </html>
