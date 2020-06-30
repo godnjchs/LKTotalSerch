@@ -28,7 +28,7 @@
         
             margin: 100px auto;
             width: 30%;
-            height: 20%;
+            
             background-color: white;
             border-radius: 23px;
         }
@@ -44,7 +44,10 @@
         .loginInfo > input{
             display: block;
             margin: 15px 0;
-            border: none;
+            border : none;
+            border-bottom: 1px solid black;
+            width: 100%;
+            height: 40px;
             
         }
 
@@ -53,13 +56,17 @@
 <body>
     <div class="mainContainer">
         <div class="loginCard">
-            <form action="">
+            <form action="" method="post">
                 <h1>LKTotalSerch</h1>
                 <div class="loginInfo">
                     <label for="id">아이디</label>
-                    <input type="text" placeholder="아이디" name="userId">
+                    
+                    <input type="text" placeholder="아이디" name="userId" autocomplete="address-level1">
                     <label for="userId">비밀번호</label>
                     <input type="password" placeholder="비밀번호" name = "password">
+                    <label for="name">닉네임</label>
+                    <input type="text" name="name" placeholder="닉네임"/>
+                    
                     <div id="naverIdLogin"></div>
                     <div id="create-kakao-login-btn"></div>
                     
@@ -75,7 +82,7 @@
 	    			clientId: "otOLtR2LBUbv_AWne1Sz",
 	    			callbackUrl: "http://127.0.0.1:8080/LKTotalSerch/main/main.html",
 	    			isPopup: false, /* 팝업을 통한 연동처리 여부 */
-	    			loginButton: {color: "green", type: 3, height: 60} /* 로그인 버튼의 타입을 지정 */
+	    			loginButton: {color: "green", type: 3, height: 50} /* 로그인 버튼의 타입을 지정 */
 	    		}
 	    	);
 	    	
