@@ -28,7 +28,11 @@
         
             margin: 100px auto;
             width: 30%;
+<<<<<<< HEAD
             
+=======
+            	
+>>>>>>> a64d41349780a912b8ec759296b151a0c89c947e
             background-color: white;
             border-radius: 23px;
         }
@@ -68,7 +72,7 @@
                     <input type="text" name="name" placeholder="닉네임"/>
                     
                     <div id="naverIdLogin"></div>
-                    <div id="create-kakao-login-btn"></div>
+                    <a id="create-kakao-login-btn" href="javascript:loginWithKaKao"></a>
                     
                 </div>
             </form>
@@ -92,13 +96,22 @@
 	    	Kakao.Auth.createLoginButton({
 	    	    container: '#create-kakao-login-btn',
 	    	    success: function(authObj) {
-	    	      alert(JSON.stringify(authObj))
+	    	      location.href="../main/main.html";
+	    	     
 	    	    },
 	    	    fail: function(err) {
 	    	      alert(JSON.stringify(err))
 	    	    },
 	    	  })
 	    	  
+	    		function loginWithKaKao(){
+	    			alert('실행!!')
+	    	 		Kakao.Auth.authorize({
+	    				 redirectUri : 'http://127.0.0.1:8080'
+	    	 	})
+	    	}
+	    	
+	    	   
 	    	  
 	    	
 	    	
