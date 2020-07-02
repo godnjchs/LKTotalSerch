@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+ <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
+</head>
+<body>
+
+</body>
+<script>
+	var naverLogin = new naver.LoginWithNaverId(
+		{
+			clientId: "otOLtR2LBUbv_AWne1Sz",
+			callbackUrl: "http://127.0.0.1:8080/LKTotalSerch/login.lk",
+			
+		}
+	);
+	
+	/* 설정정보를 초기화하고 연동을 준비 */
+	naverLogin.init();
+	console.log(naverLogin.loginStatus)
+	document.querySelector('body').innerHTML = naverLogin.loginStatus;
+</script>
+</html>
